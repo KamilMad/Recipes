@@ -1,0 +1,285 @@
+[1;31m
+Start test 1[0m
+	[0;34m
+4[0m[0;34m  .   ____          _            __ _ _
+5[0m[0;34m /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+6[0m[0;34m( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+7[0m[0;34m \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+6[0m[0;34m  '  |____| .__|_| |_|_| |_\__, | / / / /
+5[0m[0;34m =========|_|==============|___/=/_/_/_/
+7[0m[0;34m :: Spring Boot ::                (v2.5.6)
+[0m[0;34m
+î[0m[0;34m2023-04-27 13:09:48.279  INFO 17704 --- [    Test worker] recipes.RecipesApplication               : Starting RecipesApplication using Java 17.0.6 on DESKTOP-JGBSKVN with PID 17704 (started by Kamil in C:\Users\Kamil\Desktop\Streams with Laur\Recipes\Recipes\task)
+±[0m[0;34m2023-04-27 13:09:48.282  INFO 17704 --- [    Test worker] recipes.RecipesApplication               : No active profile set, falling back to default profiles: default
+¨[0m[0;34m2023-04-27 13:09:50.235  INFO 17704 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+«[0m[0;34m2023-04-27 13:09:50.386  INFO 17704 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 126 ms. Found 2 JPA repository interfaces.
+ù[0m[0;34m2023-04-27 13:09:51.800  INFO 17704 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+ä[0m[0;34m2023-04-27 13:09:51.825  INFO 17704 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+†[0m[0;34m2023-04-27 13:09:51.826  INFO 17704 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+£[0m[0;34m2023-04-27 13:09:52.064  INFO 17704 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+∞[0m[0;34m2023-04-27 13:09:52.065  INFO 17704 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3737 ms
+ã[0m[0;34m2023-04-27 13:09:52.387  INFO 17704 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+ê[0m[0;34m2023-04-27 13:09:52.910  INFO 17704 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+≈[0m[0;34m2023-04-27 13:09:52.925  INFO 17704 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:~/testdb'
+™[0m[0;34m2023-04-27 13:09:53.341  INFO 17704 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+£[0m[0;34m2023-04-27 13:09:53.489  INFO 17704 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+©[0m[0;34m2023-04-27 13:09:53.846  INFO 17704 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+™[0m[0;34m2023-04-27 13:09:54.097  INFO 17704 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+‰[0m[0;34m2023-04-27 13:09:55.356  INFO 17704 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+¥[0m[0;34m2023-04-27 13:09:55.373  INFO 17704 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+ù[0m[0;34m2023-04-27 13:09:56.063  INFO 17704 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7d49fe37, org.springframework.security.web.context.SecurityContextPersistenceFilter@467421cc, org.springframework.security.web.header.HeaderWriterFilter@6c167296, org.springframework.security.web.authentication.logout.LogoutFilter@2487b621, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@5af1b221, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28521ed5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@7e35d743, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74ab8610, org.springframework.security.web.session.SessionManagementFilter@1256925b, org.springframework.security.web.access.ExceptionTranslationFilter@5afa0b1a, org.springframework.security.web.access.intercept.AuthorizationFilter@49741e80]
+®[0m[0;34m2023-04-27 13:09:56.171  WARN 17704 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+¶[0m[0;34m2023-04-27 13:09:56.748  INFO 17704 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+¨[0m[0;34m2023-04-27 13:09:56.796  INFO 17704 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+µ[0m[0;34m2023-04-27 13:09:56.813  INFO 17704 --- [    Test worker] recipes.RecipesApplication               : Started RecipesApplication in 8.989 seconds (JVM running for 10.066)
+¶[0;34m2023-04-27 13:09:57.196  INFO 17704 --- [nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+ô[0m[0;34m2023-04-27 13:09:57.197  INFO 17704 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+ë[0m[0;34m2023-04-27 13:09:57.198  INFO 17704 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+[0m[1;31m
+Start test 2[0m
+[1;31m
+Start test 3[0m
+[1;31m
+Start test 4[0m
+[1;31m
+Start test 5[0m
+[1;31m
+Start test 6[0m
+[1;31m
+Start test 7[0m
+[1;31m
+Start test 8[0m
+[1;31m
+Start test 9[0m
+‰[0;34m2023-04-27 13:09:58.263  INFO 17704 --- [nio-8881-exec-9] o.h.c.i.AbstractPersistentCollection     : HHH000496: Detaching an uninitialized collection with queued operations from a session: [recipes.model.User.recipes#96]
+[1;31m
+Start test 10[0m
+‰[0;34m2023-04-27 13:09:58.360  INFO 17704 --- [io-8881-exec-10] o.h.c.i.AbstractPersistentCollection     : HHH000496: Detaching an uninitialized collection with queued operations from a session: [recipes.model.User.recipes#96]
+[1;31m
+Start test 11[0m
+[1;31m
+Start test 12[0m
+[1;31m
+Start test 13[0m
+¨[0;34m2023-04-27 13:09:59.122  INFO 17704 --- [       Thread-5] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+ï[0m[0;34m2023-04-27 13:09:59.126  INFO 17704 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+ì[0m[0;34m2023-04-27 13:09:59.128  INFO 17704 --- [       Thread-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+	[0;34m
+4[0m[0;34m  .   ____          _            __ _ _
+5[0m[0;34m /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+6[0m[0;34m( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+7[0m[0;34m \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+6[0m[0;34m  '  |____| .__|_| |_|_| |_\__, | / / / /
+5[0m[0;34m =========|_|==============|___/=/_/_/_/
+7[0m[0;34m :: Spring Boot ::                (v2.5.6)
+[0m[0;34m
+î[0m[0;34m2023-04-27 13:10:09.524  INFO 17704 --- [    Test worker] recipes.RecipesApplication               : Starting RecipesApplication using Java 17.0.6 on DESKTOP-JGBSKVN with PID 17704 (started by Kamil in C:\Users\Kamil\Desktop\Streams with Laur\Recipes\Recipes\task)
+±[0m[0;34m2023-04-27 13:10:09.525  INFO 17704 --- [    Test worker] recipes.RecipesApplication               : No active profile set, falling back to default profiles: default
+¨[0m[0;34m2023-04-27 13:10:09.857  INFO 17704 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+∆[0m[0;34m2023-04-27 13:10:09.872  INFO 17704 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 2 JPA repository interfaces.
+ù[0m[0;34m2023-04-27 13:10:09.956  INFO 17704 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+ä[0m[0;34m2023-04-27 13:10:09.957  INFO 17704 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+†[0m[0;34m2023-04-27 13:10:09.957  INFO 17704 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+£[0m[0;34m2023-04-27 13:10:09.991  INFO 17704 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+Ø[0m[0;34m2023-04-27 13:10:09.992  INFO 17704 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 465 ms
+ã[0m[0;34m2023-04-27 13:10:10.023  INFO 17704 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+ê[0m[0;34m2023-04-27 13:10:10.024  INFO 17704 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+≈[0m[0;34m2023-04-27 13:10:10.025  INFO 17704 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:~/testdb'
+™[0m[0;34m2023-04-27 13:10:10.069  INFO 17704 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+™[0m[0;34m2023-04-27 13:10:10.078  INFO 17704 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+‰[0m[0;34m2023-04-27 13:10:10.192  INFO 17704 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+¥[0m[0;34m2023-04-27 13:10:10.192  INFO 17704 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+ù[0m[0;34m2023-04-27 13:10:10.296  INFO 17704 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@15ec3c0c, org.springframework.security.web.context.SecurityContextPersistenceFilter@482034fb, org.springframework.security.web.header.HeaderWriterFilter@4dc23273, org.springframework.security.web.authentication.logout.LogoutFilter@1cb4cad0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@2f349170, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@41bd8ec9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1d306d27, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@323b5264, org.springframework.security.web.session.SessionManagementFilter@35bfa7be, org.springframework.security.web.access.ExceptionTranslationFilter@48682f91, org.springframework.security.web.access.intercept.AuthorizationFilter@2f95ce11]
+®[0m[0;34m2023-04-27 13:10:10.324  WARN 17704 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+¶[0m[0;34m2023-04-27 13:10:10.478  INFO 17704 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+¨[0m[0;34m2023-04-27 13:10:10.494  INFO 17704 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+µ[0m[0;34m2023-04-27 13:10:10.499  INFO 17704 --- [    Test worker] recipes.RecipesApplication               : Started RecipesApplication in 1.005 seconds (JVM running for 23.752)
+[0m[1;31m
+Start test 14[0m
+¶[0;34m2023-04-27 13:10:10.509  INFO 17704 --- [nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+ô[0m[0;34m2023-04-27 13:10:10.509  INFO 17704 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+ë[0m[0;34m2023-04-27 13:10:10.511  INFO 17704 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+[1;31m
+Start test 15[0m
+[1;31m
+Start test 16[0m
+[1;31m
+Start test 17[0m
+[1;31m
+Start test 18[0m
+[1;31m
+Start test 19[0m
+[1;31m
+Start test 20[0m
+[1;31m
+Start test 21[0m
+[1;31m
+Start test 22[0m
+‰[0;34m2023-04-27 13:10:11.409  INFO 17704 --- [nio-8881-exec-9] o.h.c.i.AbstractPersistentCollection     : HHH000496: Detaching an uninitialized collection with queued operations from a session: [recipes.model.User.recipes#96]
+[1;31m
+Start test 23[0m
+‰[0;34m2023-04-27 13:10:11.519  INFO 17704 --- [io-8881-exec-10] o.h.c.i.AbstractPersistentCollection     : HHH000496: Detaching an uninitialized collection with queued operations from a session: [recipes.model.User.recipes#96]
+[1;31m
+Start test 24[0m
+Ë[0m[0;34m2023-04-27 13:10:11.629  INFO 17704 --- [nio-8881-exec-1] o.h.c.i.AbstractPersistentCollection     : HHH000496: Detaching an uninitialized collection with queued operations from a session: [recipes.model.User.recipes#96]
+[1;31m
+Start test 25[0m
+‰[0;34m2023-04-27 13:10:11.738  INFO 17704 --- [nio-8881-exec-2] o.h.c.i.AbstractPersistentCollection     : HHH000496: Detaching an uninitialized collection with queued operations from a session: [recipes.model.User.recipes#96]
+[1;31m
+Start test 26[0m
+‰[0;34m2023-04-27 13:10:11.832  INFO 17704 --- [nio-8881-exec-3] o.h.c.i.AbstractPersistentCollection     : HHH000496: Detaching an uninitialized collection with queued operations from a session: [recipes.model.User.recipes#96]
+[1;31m
+Start test 27[0m
+‰[0;34m2023-04-27 13:10:11.926  INFO 17704 --- [nio-8881-exec-4] o.h.c.i.AbstractPersistentCollection     : HHH000496: Detaching an uninitialized collection with queued operations from a session: [recipes.model.User.recipes#96]
+[1;31m
+Start test 28[0m
+‰[0;34m2023-04-27 13:10:12.018  INFO 17704 --- [nio-8881-exec-5] o.h.c.i.AbstractPersistentCollection     : HHH000496: Detaching an uninitialized collection with queued operations from a session: [recipes.model.User.recipes#96]
+[1;31m
+Start test 29[0m
+‰[0;34m2023-04-27 13:10:12.115  INFO 17704 --- [nio-8881-exec-6] o.h.c.i.AbstractPersistentCollection     : HHH000496: Detaching an uninitialized collection with queued operations from a session: [recipes.model.User.recipes#96]
+[1;31m
+Start test 30[0m
+‰[0;34m2023-04-27 13:10:12.222  INFO 17704 --- [nio-8881-exec-7] o.h.c.i.AbstractPersistentCollection     : HHH000496: Detaching an uninitialized collection with queued operations from a session: [recipes.model.User.recipes#96]
+[1;31m
+Start test 31[0m
+‰[0;34m2023-04-27 13:10:12.319  INFO 17704 --- [nio-8881-exec-8] o.h.c.i.AbstractPersistentCollection     : HHH000496: Detaching an uninitialized collection with queued operations from a session: [recipes.model.User.recipes#96]
+[1;31m
+Start test 32[0m
+Ë[0m[0;34m2023-04-27 13:10:12.414  INFO 17704 --- [nio-8881-exec-9] o.h.c.i.AbstractPersistentCollection     : HHH000496: Detaching an uninitialized collection with queued operations from a session: [recipes.model.User.recipes#96]
+[1;31m
+Start test 33[0m
+Ë[0m[0;34m2023-04-27 13:10:12.514  INFO 17704 --- [io-8881-exec-10] o.h.c.i.AbstractPersistentCollection     : HHH000496: Detaching an uninitialized collection with queued operations from a session: [recipes.model.User.recipes#96]
+[1;31m
+Start test 34[0m
+Ë[0m[0;34m2023-04-27 13:10:12.619  INFO 17704 --- [nio-8881-exec-1] o.h.c.i.AbstractPersistentCollection     : HHH000496: Detaching an uninitialized collection with queued operations from a session: [recipes.model.User.recipes#96]
+[1;31m
+Start test 35[0m
+[1;31m
+Start test 36[0m
+[1;31m
+Start test 37[0m
+[1;31m
+Start test 38[0m
+[1;31m
+Start test 39[0m
+[1;31m
+Start test 40[0m
+[1;31m
+Start test 41[0m
+[1;31m
+Start test 42[0m
+[1;31m
+Start test 43[0m
+[1;31m
+Start test 44[0m
+[1;31m
+Start test 45[0m
+[1;31m
+Start test 46[0m
+[1;31m
+Start test 47[0m
+[1;31m
+Start test 48[0m
+[1;31m
+Start test 49[0m
+[1;31m
+Start test 50[0m
+[1;31m
+Start test 51[0m
+[1;31m
+Start test 52[0m
+[1;31m
+Start test 53[0m
+[1;31m
+Start test 54[0m
+[1;31m
+Start test 55[0m
+[1;31m
+Start test 56[0m
+[1;31m
+Start test 57[0m
+[1;31m
+Start test 58[0m
+[1;31m
+Start test 59[0m
+[1;31m
+Start test 60[0m
+[1;31m
+Start test 61[0m
+[1;31m
+Start test 62[0m
+[1;31m
+Start test 63[0m
+¨[0;34m2023-04-27 13:10:15.478  INFO 17704 --- [       Thread-7] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+ï[0m[0;34m2023-04-27 13:10:15.478  INFO 17704 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+ì[0m[0;34m2023-04-27 13:10:15.479  INFO 17704 --- [       Thread-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+	[0;34m
+4[0m[0;34m  .   ____          _            __ _ _
+5[0m[0;34m /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+6[0m[0;34m( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+7[0m[0;34m \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+6[0m[0;34m  '  |____| .__|_| |_|_| |_\__, | / / / /
+5[0m[0;34m =========|_|==============|___/=/_/_/_/
+7[0m[0;34m :: Spring Boot ::                (v2.5.6)
+[0m[0;34m
+î[0m[0;34m2023-04-27 13:10:25.923  INFO 17704 --- [    Test worker] recipes.RecipesApplication               : Starting RecipesApplication using Java 17.0.6 on DESKTOP-JGBSKVN with PID 17704 (started by Kamil in C:\Users\Kamil\Desktop\Streams with Laur\Recipes\Recipes\task)
+±[0m[0;34m2023-04-27 13:10:25.923  INFO 17704 --- [    Test worker] recipes.RecipesApplication               : No active profile set, falling back to default profiles: default
+¨[0m[0;34m2023-04-27 13:10:26.197  INFO 17704 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+∆[0m[0;34m2023-04-27 13:10:26.212  INFO 17704 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 2 JPA repository interfaces.
+ù[0m[0;34m2023-04-27 13:10:26.297  INFO 17704 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8881 (http)
+ä[0m[0;34m2023-04-27 13:10:26.298  INFO 17704 --- [    Test worker] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+†[0m[0;34m2023-04-27 13:10:26.298  INFO 17704 --- [    Test worker] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+£[0m[0;34m2023-04-27 13:10:26.332  INFO 17704 --- [    Test worker] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+Ø[0m[0;34m2023-04-27 13:10:26.332  INFO 17704 --- [    Test worker] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 406 ms
+ã[0m[0;34m2023-04-27 13:10:26.359  INFO 17704 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+ê[0m[0;34m2023-04-27 13:10:26.361  INFO 17704 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+≈[0m[0;34m2023-04-27 13:10:26.361  INFO 17704 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:file:~/testdb'
+™[0m[0;34m2023-04-27 13:10:26.403  INFO 17704 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+™[0m[0;34m2023-04-27 13:10:26.412  INFO 17704 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+‰[0m[0;34m2023-04-27 13:10:26.501  INFO 17704 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+¥[0m[0;34m2023-04-27 13:10:26.501  INFO 17704 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+ù[0m[0;34m2023-04-27 13:10:26.597  INFO 17704 --- [    Test worker] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@14d5b2ac, org.springframework.security.web.context.SecurityContextPersistenceFilter@4b6abf4e, org.springframework.security.web.header.HeaderWriterFilter@310df168, org.springframework.security.web.authentication.logout.LogoutFilter@676c3745, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@128579a6, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@27959922, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@794daa09, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@272d0dd3, org.springframework.security.web.session.SessionManagementFilter@3606c525, org.springframework.security.web.access.ExceptionTranslationFilter@7e32442d, org.springframework.security.web.access.intercept.AuthorizationFilter@78b20c7f]
+®[0m[0;34m2023-04-27 13:10:26.621  WARN 17704 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+¶[0m[0;34m2023-04-27 13:10:26.762  INFO 17704 --- [    Test worker] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+¨[0m[0;34m2023-04-27 13:10:26.777  INFO 17704 --- [    Test worker] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8881 (http) with context path ''
+µ[0m[0;34m2023-04-27 13:10:26.782  INFO 17704 --- [    Test worker] recipes.RecipesApplication               : Started RecipesApplication in 0.887 seconds (JVM running for 40.035)
+[0m[1;31m
+Start test 64[0m
+¶[0;34m2023-04-27 13:10:26.790  INFO 17704 --- [nio-8881-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+ô[0m[0;34m2023-04-27 13:10:26.790  INFO 17704 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+ë[0m[0;34m2023-04-27 13:10:26.791  INFO 17704 --- [nio-8881-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+Ë[0m[0;34m2023-04-27 13:10:26.966  INFO 17704 --- [nio-8881-exec-1] o.h.c.i.AbstractPersistentCollection     : HHH000496: Detaching an uninitialized collection with queued operations from a session: [recipes.model.User.recipes#95]
+[1;31m
+Start test 65[0m
+[1;31m
+Start test 66[0m
+[1;31m
+Start test 67[0m
+[1;31m
+Start test 68[0m
+[1;31m
+Start test 69[0m
+[1;31m
+Start test 70[0m
+[1;31m
+Start test 71[0m
+[1;31m
+Start test 72[0m
+[1;31m
+Start test 73[0m
+[1;31m
+Start test 74[0m
+[1;31m
+Start test 75[0m
+[1;31m
+Start test 76[0m
+[1;31m
+Start test 77[0m
+[1;31m
+Start test 78[0m
+[1;31m
+Start test 79[0m
+[1;31m
+Start test 80[0m
+[1;31m
+Start test 81[0m
