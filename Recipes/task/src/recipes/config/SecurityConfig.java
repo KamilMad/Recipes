@@ -24,6 +24,7 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
+                .cors().disable()
                 .csrf(csrf -> {
                     csrf.disable();
                     csrf.ignoringAntMatchers("/h2-console/**");
@@ -32,6 +33,7 @@ public class SecurityConfig {
                     auth.antMatchers("/h2-console/**").permitAll();
                     auth.antMatchers("/actuator/shutdown").permitAll();
                     auth.antMatchers("/api/register").permitAll();
+                    auth.antMatchers("api/recipe/search/**").authenticated();
                     auth.anyRequest().authenticated();
                 })
                 .headers().frameOptions().disable()

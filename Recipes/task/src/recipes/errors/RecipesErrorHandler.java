@@ -14,25 +14,25 @@ import java.nio.file.AccessDeniedException;
 public class RecipesErrorHandler {
 
     @ExceptionHandler(RecipeNotFoundException.class)
-    public ResponseEntity<ApiError> handleContentNotAllowedException(RecipeNotFoundException ex) {
+    public ResponseEntity<RuntimeException> handleContentNotAllowedException(RecipeNotFoundException ex) {
 
-        return new ResponseEntity<>(new ApiError(ex.getMessage()), HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(new RuntimeException(ex.getMessage()), HttpStatus.NOT_FOUND);
+        //return new ResponseEntity<>(new ApiError(ex.getMessage()), HttpStatus.NOT_FOUND);
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<ApiError> handleMethodArgumentNotValid(MethodArgumentNotValidException ex) {
-        return new ResponseEntity<>(new ApiError("Validacja jebła"), HttpStatus.BAD_REQUEST);
+    public ResponseEntity<RuntimeException> handleMethodArgumentNotValid(MethodArgumentNotValidException ex) {
+        return new ResponseEntity<>(new RuntimeException(ex.getMessage()), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(UsernameNotFoundException.class)
-    public ResponseEntity<ApiError> UsernameNotFoundException(UsernameNotFoundException ex) {
-        return new ResponseEntity<>(new ApiError(ex.getMessage()), HttpStatus.BAD_REQUEST);
+    public ResponseEntity<RuntimeException> UsernameNotFoundException(UsernameNotFoundException ex) {
+        return new ResponseEntity<>(new RuntimeException(ex.getMessage()), HttpStatus.BAD_REQUEST);
     }
 
     @ExceptionHandler(AccessDeniedException.class)
-    public ResponseEntity<ApiError> handleAccessDeniedException(AccessDeniedException ex) {
-        // return the error response with a 403 Forbidden status code
-        return new ResponseEntity<>(new ApiError("PreAuthorize error"), HttpStatus.FORBIDDEN);
+    public ResponseEntity<RuntimeException> handleAccessDeniedException(AccessDeniedException ex) {
+        return new ResponseEntity<>(new RuntimeException(ex.getMessage()), HttpStatus.FORBIDDEN);
     }
 
 }

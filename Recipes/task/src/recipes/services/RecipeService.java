@@ -3,11 +3,9 @@ package recipes.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.AccessDeniedException;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.core.parameters.P;
-import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 import recipes.errors.RecipeNotFoundException;
@@ -18,9 +16,8 @@ import recipes.repositories.RecipeRepository;
 import recipes.repositories.UserRepository;
 import recipes.security.CustomUserDetails;
 
+import java.time.LocalDateTime;
 import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -48,37 +45,23 @@ public class RecipeService {
 
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 
-        Optional<User> user = userRepository.findByEmail(auth.getName());
-        newRecipe.setUser(user.get());
+        User user = userRepository.findByEmail(auth.getName())
+                .orElseThrow(() -> new UsernameNotFoundException("Suche a user not found"));
+
+        newRecipe.setUser(user);
 
         recipeRepository.save(newRecipe);
 
-        user.get().getRecipes().add(newRecipe);
-
+        user.getRecipes().add(newRecipe);
 
         return newRecipe.getId();
     }
-
-   /* public Long addRecipe(Recipe recipe) {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        User user = ((CustomUserDetails) auth.getPrincipal()).getUser();
-
-        Recipe newRecipe = new Recipe(recipe.getName(), recipe.getCategory(),
-                recipe.getDescription(), recipe.getIngredients(), recipe.getDirections(), user);
-
-        recipeRepository.save(newRecipe);
-        user.getRecipes().add(newRecipe);
-
-        addCreatedRecipeIds(newRecipe.getId());
-
-        return newRecipe.getId();
-    }*/
 
     public RecipeDto getRecipeById(Long id){
         Recipe recipe =  recipeRepository.findById(id)
                 .orElseThrow(() -> new RecipeNotFoundException("No such a recipe"));
 
-        return mapEntityToDto(recipe);
+        return fromDto(recipe);
 
 
     }
@@ -87,7 +70,7 @@ public class RecipeService {
 
         Recipe recipe= recipeRepository.findById(id).orElseThrow(() -> new RecipeNotFoundException("No such a recipe"));
 
-        if (!isAuthor(id, recipe)) {
+        if (!isAuthor(recipe)) {
             throw new AccessDeniedException("Access denied");
         }
 
@@ -96,31 +79,31 @@ public class RecipeService {
 
     public void updateById(Long id, Recipe recipe){
 
-        Recipe tempRecipe = recipeRepository.findById(id).orElseThrow(() -> new RecipeNotFoundException("No such a recipe"));
+        Recipe existingRecipe = recipeRepository.findById(id)
+                .orElseThrow(() -> new RecipeNotFoundException("No such a recipe"));
 
-        if (!isAuthor(id, recipe)) {
+
+        if (!isAuthor(existingRecipe)) {
             throw new AccessDeniedException("Access denied");
         }
 
-        tempRecipe.setName(recipe.getName());
-        tempRecipe.setIngredients(recipe.getIngredients());
-        tempRecipe.setDescription(recipe.getDescription());
-        tempRecipe.setCategory(recipe.getCategory());
-        tempRecipe.setDirections(recipe.getDirections());
+        existingRecipe.setName(recipe.getName());
+        existingRecipe.setDate(LocalDateTime.now());
+        existingRecipe.setIngredients(recipe.getIngredients());
+        existingRecipe.setDescription(recipe.getDescription());
+        existingRecipe.setCategory(recipe.getCategory());
+        existingRecipe.setDirections(recipe.getDirections());
 
-        recipeRepository.save(tempRecipe);
-
+        recipeRepository.save(existingRecipe);
     }
 
     public List<RecipeDto> findAll(String category, String name){
 
-        if ((category == null && name == null)
-                || (category != null && name != null)){
+        if (category == null && name == null){
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
-
         }
-        List<Recipe> recipes;
 
+        List<Recipe> recipes;
         if (category != null){
             recipes = recipeRepository.findByCategoryIgnoreCaseOrderByDateDesc(category);
         }
@@ -128,43 +111,24 @@ public class RecipeService {
             recipes = recipeRepository.findByNameContainingIgnoreCaseOrderByDateDesc(name);
         }
 
-        return recipes.stream().map(this::mapEntityToDto).collect(Collectors.toList());
+        return recipes.stream()
+                .map(this::fromDto)
+                .collect(Collectors.toList());
     }
 
-    public List<Recipe> findRecipesByUserId(Long userId){
-
-        return recipeRepository.findByUserId(userId);
-    }
-
-    public boolean isAuthor(Long recipeId, Recipe recipe) {
+    public boolean isAuthor(Recipe recipe) {
 
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
 
-        return  (recipe.getUser().getId() == userDetails.getUser().getId());
+        User user = userDetails.getUser();
+        return recipe.getUser().equals(user);
     }
 
 
-    private RecipeDto mapEntityToDto(Recipe recipe){
+    private RecipeDto fromDto(Recipe recipe){
 
         return new RecipeDto(recipe.getName(),recipe.getCategory(),recipe.getDate(),recipe.getDescription(),
                 recipe.getIngredients(), recipe.getDirections());
     }
-
-
-    private void addCreatedRecipeIds(Long recipeId) {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
-
-        userDetails.getCreatedRecipeIds().add(recipeId);
-    }
-
-    private void deleteCreatedRecipeIds(Long recipeId) {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        CustomUserDetails userDetails = (CustomUserDetails) authentication.getPrincipal();
-
-        userDetails.getCreatedRecipeIds().remove(recipeId);
-    }
-
-
 }

@@ -1,8 +1,6 @@
 package recipes.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.hibernate.annotations.Cascade;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -16,7 +14,8 @@ import java.util.List;
 
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
+@Getter
+@Setter
 @Entity
 public class Recipe {
     @Id
@@ -63,16 +62,4 @@ public class Recipe {
         this.ingredients = ingredients;
         this.directions = directions;
     }
-
-    public Recipe(String name, String category, String description, List<String> ingredients, List<String> directions, User user) {
-        this.name = name;
-        this.category = category;
-        this.date = LocalDateTime.now();
-        this.description = description;
-        this.ingredients = ingredients;
-        this.directions = directions;
-        this.setUser(user);
-    }
-
-
 }
